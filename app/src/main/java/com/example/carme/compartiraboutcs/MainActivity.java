@@ -38,9 +38,23 @@ public class MainActivity extends AppCompatActivity {
                 if (sendIntent.resolveActivity(getPackageManager()) != null){
                     startActivity(sendIntent);
                 }
+
+
+                // Intent createChooser(sendIntent, Share);
+                //Intent sendIntent = new Intent(Intent.ACTION_SEND);
+                //String title = getResources().getString(R.string.Share);
+               // Intent chooser = Intent.createChooser(sendIntent,title);
+
+               // if (sendIntent.resolveActivity(getPackageManager()) != null) {
+                  //  startActivity(chooser);
+               // }
+
             }
         });
 
 
+
     }
 }
+
+
