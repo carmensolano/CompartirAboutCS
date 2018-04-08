@@ -26,7 +26,6 @@ public class Main2Activity extends AppCompatActivity {
         text2 = findViewById(R.id.yourphone);
         text3 = findViewById(R.id.yourinsta);
         text4 = findViewById(R.id.yourtwitter);
-
         Intent callingIntent = getIntent();
         String intentAction = callingIntent.getAction();
         String intentType = callingIntent.getType();
@@ -47,6 +46,30 @@ public class Main2Activity extends AppCompatActivity {
             }
 
         });
+
+
+
+        Intent callingIntent1 = getIntent();
+        String intentAction1 = callingIntent1.getAction();
+       String intentType1 = callingIntent1.getType();
+
+         if (Intent.ACTION_SEND.equals(intentAction1) && intentType1 != null){
+            if (intentType1.equals("text/plain")){
+                handleReceivedText(callingIntent1);
+            }
+        }
+
+        but.setOnClickListener(new View.OnClickListener(){
+            @Override
+
+            public void onClick(View v1){
+                Intent fstScreenIntent1 = new Intent(getApplicationContext(), MainActivity.class );
+                startActivity(fstScreenIntent1);
+
+            }
+
+        });
+
 
     }
 
@@ -76,7 +99,7 @@ public class Main2Activity extends AppCompatActivity {
         if (text4 != null){
             text4.setText(intentText4);
         }
-
-
     }
 }
+
+

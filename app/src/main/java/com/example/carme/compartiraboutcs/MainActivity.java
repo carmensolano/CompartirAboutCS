@@ -30,15 +30,50 @@ public class MainActivity extends AppCompatActivity {
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.setType("text/plain");
                 sendIntent.putExtra(Intent.EXTRA_TEXT, text.getText() .toString());
-                sendIntent.putExtra(Intent.EXTRA_TEXT, text1.getText() .toString());
-                sendIntent.putExtra(Intent.EXTRA_TEXT, text2.getText() .toString());
-                sendIntent.putExtra(Intent.EXTRA_TEXT, text3.getText() .toString());
-                sendIntent.putExtra(Intent.EXTRA_TEXT, text4.getText() .toString());
+
 
                 if (sendIntent.resolveActivity(getPackageManager()) != null){
                     startActivity(sendIntent);
                 }
 
+                Intent sendIntent1=new Intent();
+                sendIntent1.setAction(Intent.ACTION_SEND);
+                sendIntent1.setType("text/plain");
+                sendIntent1.putExtra(Intent.EXTRA_TEXT, text1.getText() .toString());
+
+                if (sendIntent1.resolveActivity(getPackageManager()) != null){
+                    startActivity(sendIntent1);
+                }
+
+
+                Intent sendIntent2=new Intent();
+                sendIntent2.setAction(Intent.ACTION_SEND);
+                sendIntent2.setType("text/plain");
+                sendIntent2.putExtra(Intent.EXTRA_TEXT, text2.getText() .toString());
+
+                if (sendIntent2.resolveActivity(getPackageManager()) != null){
+                    startActivity(sendIntent2);
+                }
+
+
+                Intent sendIntent3=new Intent();
+                sendIntent3.setAction(Intent.ACTION_SEND);
+                sendIntent3.setType("text/plain");
+                sendIntent3.putExtra(Intent.EXTRA_TEXT, text3.getText() .toString());
+
+                if (sendIntent3.resolveActivity(getPackageManager()) != null){
+                    startActivity(sendIntent3);
+                }
+
+
+                Intent sendIntent4=new Intent();
+                sendIntent4.setAction(Intent.ACTION_SEND);
+                sendIntent4.setType("text/plain");
+                sendIntent4.putExtra(Intent.EXTRA_TEXT, text4.getText() .toString());
+
+                if (sendIntent4.resolveActivity(getPackageManager()) != null){
+                    startActivity(sendIntent4);
+                }
 
                 // Intent createChooser(sendIntent, Share);
                 //Intent sendIntent = new Intent(Intent.ACTION_SEND);
